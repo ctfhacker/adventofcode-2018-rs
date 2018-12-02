@@ -1,0 +1,13 @@
+[package]
+name = "adventofcode-2018-rs"
+version = "0.1.0"
+authors = ["ctfhacker <cld251@gmail.com>"]
+edition = "2018"
+
+[lib]
+bench = false
+
+[dependencies]
+rust-crypto = "0.2.36"
+aoc-runner = "0.1.0"
+aoc-runner-derive = "0.1.0"
