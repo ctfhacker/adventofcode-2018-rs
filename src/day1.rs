@@ -1,8 +1,23 @@
 use std::collections::HashSet;
 
+/*
+AOC 2018
+Day 1 - Part 1 : 592
+        generator: 12.666µs,
+        runner: 34.021µs
+
+Day 1 - Part 2 - set : 241
+        generator: 260ns,
+        runner: 27.686372ms
+
+Day 1 - Part 2 - vec : 241
+        generator: 657ns,
+        runner: 2.242261429s
+*/
+
 #[aoc(day1, part1)]
 pub fn part1(input: &str) -> i32 {
-    input.lines().map(|n| n.parse::<i32>().unwrap()).sum()
+    input.lines().map(|n| n.parse::<i32>().expect("Unable to parse number")).sum()
 }
 
 #[aoc(day1, part2, set)]
@@ -11,7 +26,7 @@ pub fn part2_set(input: &str) -> i32 {
     let mut freq: i32 = 0;
     seen.insert(freq);
     for line in input.lines().cycle() {
-        let curr_num = line.parse::<i32>().unwrap(); 
+        let curr_num = line.parse::<i32>().expect("Unable to parse number"); 
         freq += curr_num;
         if(seen.contains(&freq)) {
             return freq;
