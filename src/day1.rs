@@ -72,10 +72,10 @@ mod tests {
     }
 
     #[test]
-    fn test2_list() {
-        assert_eq!(part2_list("+1\n-1"), 0);
-        assert_eq!(part2_list("+3\n+3\n+4\n-2\n-4"), 10);
-        assert_eq!(part2_list("-6\n+3\n+8\n+5\n-6"), 5);
-        assert_eq!(part2_list("+7\n+7\n-2\n-7\n-4"), 14);
+    fn test2_vec() {
+        assert_eq!(part2_vec("+1\n-1"), 0);
+        assert_eq!(part2_vec("+3\n+3\n+4\n-2\n-4"), 10);
+        assert_eq!(part2_vec("-6\n+3\n+8\n+5\n-6"), 5);
+        assert_eq!(part2_vec("+7\n+7\n-2\n-7\n-4"), 14);
     }
 }
